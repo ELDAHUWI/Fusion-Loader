@@ -44,7 +44,7 @@ script.onload = function() {
                 showLoaderOnConfirm: true,
                 preConfirm: (newLevel) => {
                     return new Promise((resolve, reject) => {
-                        if (!newLevel || isNaN(newLevel) || newLevel < 1 || newLevel > 100) {
+                        if (!newLevel || isNaN(newLevel) || newLevel < 1 || newLevel > 150) {
                             Swal.showValidationMessage('Please enter a valid level number between 1 and 100');
                             reject('Invalid level input');
                         } else {
@@ -328,7 +328,21 @@ script.onload = function() {
                 timerProgressBar: true,
             });
         };
-
+        // Kick Users of People on the Screen button functionality
+        document.getElementById('kickuser').onclick = async function() {
+            const users = Boot.prototype.game._state._current.playerList ?? {};
+            if (Object.keys(users).length === 0) {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: 'There are no other players on the screen.'
+                });
+            } else {
+                swal.fire()
+                
+                showSuccessMessage("user has been kicked");
+            }
+        };
         function getHack() {
             // Assuming you have a function to get the current hack instance
             // Replace this with your actual method of getting the hack instance
