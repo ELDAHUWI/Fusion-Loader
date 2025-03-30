@@ -14,9 +14,9 @@
      menu.innerHTML = `
      <h1>
          Space Magic Menu
-         <button id="announcementButton">Announcements</button>
+         <!--<button id="announcementButton">Announcements</button>-->
      </h1>
-     <p>Join our discord for hack updates & support: https://dsc.gg/pxi-fusion</p>
+     <!--<p>Join our discord for hack updates & support: https://dsc.gg/pxi-fusion</p>-->
      <div class="section">
          <h2>Player Hacks</h2>
          <div>
