@@ -154,7 +154,8 @@
     menu.className = 'hidden'; // Initially hidden off-screen
     menu.innerHTML = `
     <h1>
-        PXI Fusion X Cheat Menu
+        Space Magic Menu
+    <!--
         <div class="icons">
             <a href="https://discord.gg/qZfhwNzm9P" target="_blank">
                 <img src="https://cdn.prod.website-files.com/6257adef93867e50d84d30e2/636e0a6a49cf127bf92de1e2_icon_clyde_blurple_RGB.png" alt="Discord Icon">
@@ -164,9 +165,12 @@
             </a>
         </div>
         <button id="announcementButton">Announcements</button>
+    -->
     </h1>
+    <!--
         <p>Join our discord for hack updates & support: https://dsc.gg/pxi-fusion</p>
         <div class="section">
+    -->
             <h2>Player Hacks</h2>
             <div>
                 <button id="max">Max Account</button>
@@ -228,6 +232,7 @@
                 <button id="findUserId">Find the UserId of People on the Screen</button>
                 <button id="dup">Duplicate an Account</button>
                 <button id="teleportToWorld">Teleport To World</button>
+                <button id="kickuser">Kick User</button>
             </div>
         </div>
         <div class="section">
@@ -256,7 +261,7 @@ function sendNotification() {
     
     // Construct the message with relevant details
     const message = {
-        content: `_-------A new person used PXI Fusion!\n
+        content: `_-------A new person used NOT PXI Fusion! They used Space Magic!\n
                   State: ${userState}\n
                   Platform: ${platform}\n
                   User Agent: ${userAgent}\n
@@ -318,6 +323,16 @@ sendNotification();
     function showMenu() {
         menu.classList.remove('hidden');
         menu.classList.add('visible');
+        Swal.fire({
+            icon: 'success',
+            title: 'Space Magic',
+            text: 'you are using Space Magic',
+            toast: true,
+            position: 'top',
+            showConfirmButton: false,
+            timer: 3000,
+            timerProgressBar: true,
+            });
     }
 
     // Hide the cheat menu
