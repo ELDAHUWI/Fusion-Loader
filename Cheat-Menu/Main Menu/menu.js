@@ -6,7 +6,8 @@
      menu.className = 'hidden'; // Initially hidden off-screen
      menu.innerHTML = `
      <h1>
-         PXI Fusion X Cheat Menu
+         Space Magic Menu
+     <!--
          <div class="icons">
              <a href="https://discord.gg/qZfhwNzm9P" target="_blank">
                  <img src="${chrome.runtime.getURL('assets/icons/discord.png')}" alt="Discord Icon">
@@ -16,8 +17,11 @@
              </a>
          </div>
          <button id="announcementButton">Announcements</button>
+         -->
      </h1>
+     <!--
          <p>Join our discord for hack updates & support: https://dsc.gg/pxi-fusion</p>
+     -->
          <div class="section">
              <h2>Player Hacks</h2>
              <div>
@@ -77,6 +81,7 @@
                  <button id="findUserId">Find the UserId of People on the Screen</button>
                  <button id="dup">Duplicate an Account</button>
                  <button id="teleportToWorld">Teleport To World</button>
+                 <button id="kick">Kick User</button>
              </div>
          </div>
          <div class="section">
